@@ -1,5 +1,5 @@
 # METACRAFTERS-POLY_Module1
-## BRIDGING OF THE ASSETS BTW ONE CHAIN AND OTHER 
+BRIDGING OF THE ASSETS BTW ONE CHAIN AND OTHER 
 
 # Getting Started
 
@@ -19,7 +19,7 @@ This is a Solidity smart contract for creating and managing Non-Fungible Tokens 
 
 ## Program Explanation
 
-### mint: Allows the owner to mint a specified quantity of new NFTs, ensuring the total supply does not exceed 100.
+#### mint: Allows the owner to mint a specified quantity of new NFTs, ensuring the total supply does not exceed 100.
 ```
 function mint(uint256 quantity) external payable onlyOwner {
     require(quantity > 0, "Quantity must be greater than zero");
@@ -33,14 +33,14 @@ function mint(uint256 quantity) external payable onlyOwner {
 }
 ```
 
-### _baseURI: Internal function that returns the base URL for the metadata.
+#### _baseURI: Internal function that returns the base URL for the metadata.
 ```
 function _baseURI() internal view override returns (string memory) {
     return baseUrl;
 }
 ```
 
-### getPromptDescriptions: Public function to retrieve the prompt descriptions.
+#### getPromptDescriptions: Public function to retrieve the prompt descriptions.
 ```
 function getPromptDescriptions() external view returns (string[] memory) {
     return promptDescription;
@@ -54,7 +54,7 @@ function addPromptDescription(string memory newDescription) external onlyOwner {
 }
 ```
 
-### updateBaseUrl: Allows the owner to update the base URL for the metadata.
+#### updateBaseUrl: Allows the owner to update the base URL for the metadata.
 ```
 function updateBaseUrl(string memory newBaseUrl) external onlyOwner {
     baseUrl = newBaseUrl;
